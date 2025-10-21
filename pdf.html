@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Master Pro - All-in-One PDF Solution | 30+ Tools</title>
+    <meta name="description" content="Free online PDF tools: Convert, edit, merge, split, compress, and more. 30+ PDF utilities in one place. No registration required.">
+    <meta name="keywords" content="PDF converter, PDF editor, merge PDF, split PDF, compress PDF, PDF to Word, Word to PDF, PDF tools">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="PDF Master Pro - All-in-One PDF Solution">
+    <meta property="og:description" content="30+ PDF tools in one place. Convert, edit, merge, split, compress and more. No registration required.">
+    <meta property="og:type" content="website">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "PDF Master Pro",
+      "description": "Comprehensive PDF tool with 30+ utilities for all your PDF needs",
+      "url": "https://pdfmasterpro.example.com",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "PDF Master Pro"
+      }
+    }
+    </script>
+    
+    <style>
+        :root {
+            --primary: #4361ee;
+            --primary-dark: #3a0ca3;
+            --secondary: #4cc9f0;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #4bb543;
+            --warning: #ffcc00;
+            --danger: #dc3545;
+            --gray: #6c757d;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fb;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo h1 {
+            font-size: 24px;
+            color: var(--primary);
+        }
+        
+        .logo-icon {
+            font-size: 28px;
+            color: var(--primary);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        nav a:hover {
+            color: var(--primary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
+            color: white;
+            text-align: center;
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 40px;
+        }
+        
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn {
+            padding: 12px 30px;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-size: 16px;
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .btn-primary {
+            background-color: white;
+            color: var(--primary);
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+        
+        /* Tools Grid */
+        .tools-section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-title h3 {
+            font-size: 32px;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        
+        .tool-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+        
+        .tool-icon {
+            font-size: 40px;
+            color: var(--primary);
+            margin-bottom: 15px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .tool-card h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+        
+        .tool-card p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+        
+        /* Converter Section */
+        .converter-section {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+            display: none;
+        }
+        
+        .converter-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .converter-header h3 {
+            font-size: 28px;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+        
+        .converter-header p {
+            color: var(--gray);
+        }
+        
+        .converter-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
+        .upload-area {
+            border: 2px dashed #ccc;
+            border-radius: var(--border-radius);
+            padding: 40px 20px;
+            text-align: center;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        
+        .upload-area:hover {
+            border-color: var(--primary);
+        }
+        
+        .upload-area.active {
+            border-color: var(--primary);
+            background-color: rgba(67, 97, 238, 0.05);
+        }
+        
+        .upload-icon {
+            font-size: 48px;
+            color: var(--gray);
+            margin-bottom: 15px;
+        }
+        
+        .upload-area.active .upload-icon {
+            color: var(--primary);
+        }
+        
+        .upload-text {
+            margin-bottom: 20px;
+        }
+        
+        .file-input {
+            display: none;
+        }
+        
+        .file-info {
+            margin-top: 15px;
+            font-size: 14px;
+            color: var(--gray);
+        }
+        
+        .conversion-options {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .format-options {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+        
+        .format-option {
+            border: 2px solid #e9ecef;
+            border-radius: var(--border-radius);
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .format-option:hover {
+            border-color: var(--primary);
+        }
+        
+        .format-option.selected {
+            border-color: var(--primary);
+            background-color: rgba(67, 97, 238, 0.05);
+        }
+        
+        .format-icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: var(--gray);
+        }
+        
+        .format-option.selected .format-icon {
+            color: var(--primary);
+        }
+        
+        .convert-btn {
+            background-color: var(--primary);
+            color: white;
+            padding: 15px;
+            border-radius: var(--border-radius);
+            font-size: 18px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-top: 20px;
+        }
+        
+        .convert-btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        .convert-btn:disabled {
+            background-color: var(--gray);
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        /* Ad Spaces */
+        .ad-space {
+            background-color: #f8f9fa;
+            border: 1px dashed #dee2e6;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            text-align: center;
+            margin: 30px 0;
+            color: var(--gray);
+        }
+        
+        .ad-space.horizontal {
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .ad-space.vertical {
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-column a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #495057;
+            color: #adb5bd;
+            font-size: 14px;
+        }
+        
+        /* Progress Bar */
+        .progress-container {
+            margin-top: 20px;
+            display: none;
+        }
+        
+        .progress-bar {
+            height: 10px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .progress {
+            height: 100%;
+            background-color: var(--primary);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        
+        .progress-text {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+            color: var(--gray);
+        }
+        
+        /* Back Button */
+        .back-btn {
+            background-color: transparent;
+            border: none;
+            color: var(--primary);
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 20px;
+            transition: var(--transition);
+        }
+        
+        .back-btn:hover {
+            color: var(--primary-dark);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .converter-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .tools-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero h2 {
+                font-size: 32px;
+            }
+            
+            .format-options {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .tools-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .format-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">📄</div>
+                    <h1>PDF Master Pro</h1>
+                </div>
+                
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Tools</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>All PDF Tools You Need in One Place</h2>
+            <p>30+ powerful PDF utilities for conversion, editing, compression and more. No registration required.</p>
+            <a href="#tools" class="btn btn-primary">Explore All Tools</a>
+        </div>
+    </section>
+
+    <!-- Horizontal Ad Space -->
+    <div class="container">
+        <div class="ad-space horizontal">
+            <!-- Google AdSense Ad Unit -->
+            <!-- Replace with your Ad Unit ID -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+                crossorigin="anonymous"></script>
+            <!-- Ad Unit 1 -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                data-ad-slot="XXXXXXXXXX"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+
+    <!-- Tools Grid Section -->
+    <section class="tools-section" id="tools">
+        <div class="container">
+            <div class="section-title">
+                <h3>All PDF Tools</h3>
+                <p>Choose from our comprehensive collection of PDF utilities</p>
+            </div>
+            
+            <div class="tools-grid" id="toolsGrid">
+                <!-- Conversion Tools -->
+                <div class="tool-card" data-tool="pdf-to-word">
+                    <div class="tool-icon">📝</div>
+                    <h4>PDF to Word</h4>
+                    <p>Convert PDF to editable Word documents</p>
+                </div>
+                
+                <div class="tool-card" data-tool="word-to-pdf">
+                    <div class="tool-icon">📄</div>
+                    <h4>Word to PDF</h4>
+                    <p>Convert Word documents to PDF format</p>
+                </div>
+                
+                <div class="tool-card" data-tool="pdf-to-powerpoint">
+                    <div class="tool-icon">📊</div>
+                    <h4>PDF to PowerPoint</h4>
+                    <p>Convert PDF to editable PowerPoint presentations</p>
+                </div>
+                
+                <div class="tool-card" data-tool="powerpoint-to-pdf">
+                    <div class="tool-icon">📽️</div>
+                    <h4>PowerPoint to PDF</h4>
+                    <p>Convert PowerPoint to PDF format</p>
+                </div>
+                
+                <div class="tool-card" data-tool="pdf-to-excel">
+                    <div class="tool-icon">📈</div>
+                    <h4>PDF to Excel</h4>
+                    <p>Extract tables from PDF to Excel spreadsheets</p>
+                </div>
+                
+                <div class="tool-card" data-tool="excel-to-pdf">
+                    <div class="tool-icon">📑</div>
+                    <h4>Excel to PDF</h4>
+                    <p>Convert Excel spreadsheets to PDF</p>
+                </div>
+                
+                <div class="tool-card" data-tool="pdf-to-jpg">
+                    <div class="tool-icon">🖼️</div>
+                    <h4>PDF to JPG</h4>
+                    <p>Convert PDF pages to JPG images</p>
+                </div>
+                
+                <div class="tool-card" data-tool="jpg-to-pdf">
+                    <div class="tool-icon">📸</div>
+                    <h4>JPG to PDF</h4>
+                    <p>Convert JPG images to PDF documents</p>
+                </div>
+                
+                <div class="tool-card" data-tool="html-to-pdf">
+                    <div class="tool-icon">🌐</div>
+                    <h4>HTML to PDF</h4>
+                    <p>Convert web pages to PDF documents</p>
+                </div>
+                
+                <div class="tool-card" data-tool="pdf-to-html">
+                    <div class="tool-icon">💻</div>
+                    <h4>PDF to HTML</h4>
+                    <p>Convert PDF to HTML web pages</p>
+                </div>
+                
+                <!-- Editing Tools -->
+                <div class="tool-card" data-tool="merge-pdf">
+                    <div class="tool-icon">🔗</div>
+                    <h4>Merge PDF</h4>
+                    <p>Combine multiple PDFs into one document</p>
+                </div>
+                
+                <div class="tool-card" data-tool="split-pdf">
+                    <div class="tool-icon">✂️</div>
+                    <h4>Split PDF</h4>
+                    <p>Split PDF into multiple documents</p>
+                </div>
+                
+                <div class="tool-card" data-tool="compress-pdf">
+                    <div class="tool-icon">🗜️</div>
+                    <h4>Compress PDF</h4>
+                    <p>Reduce PDF file size without quality loss</p>
+                </div>
+                
+                <div class="tool-card" data-tool="edit-pdf">
+                    <div class="tool-icon">✏️</div>
+                    <h4>Edit PDF</h4>
+                    <p>Edit text, images, and pages in PDF</p>
+                </div>
+                
+                <div class="tool-card" data-tool="enhance-pdf">
+                    <div class="tool-icon">✨</div>
+                    <h4>Enhance PDF</h4>
+                    <p>Improve quality and readability of PDF</p>
+                </div>
+                
+                <div class="tool-card" data-tool="rotate-pdf">
+                    <div class="tool-icon">🔄</div>
+                    <h4>Rotate PDF</h4>
+                    <p>Rotate PDF pages to correct orientation</p>
+                </div>
+                
+                <div class="tool-card" data-tool="crop-pdf">
+                    <div class="tool-icon">✂️</div>
+                    <h4>Crop PDF</h4>
+                    <p>Crop PDF pages to remove margins</p>
+                </div>
+                
+                <div class="tool-card" data-tool="add-page">
+                    <div class="tool-icon">➕</div>
+                    <h4>Add Page</h4>
+                    <p>Add blank pages to PDF documents</p>
+                </div>
+                
+                <div class="tool-card" data-tool="remove-page">
+                    <div class="tool-icon">➖</div>
+                    <h4>Remove Page</h4>
+                    <p>Delete pages from PDF documents</p>
+                </div>
+                
+                <!-- Security Tools -->
+                <div class="tool-card" data-tool="lock-pdf">
+                    <div class="tool-icon">🔒</div>
+                    <h4>Lock PDF</h4>
+                    <p>Password protect your PDF documents</p>
+                </div>
+                
+                <div class="tool-card" data-tool="unlock-pdf">
+                    <div class="tool-icon">🔓</div>
+                    <h4>Unlock PDF</h4>
+                    <p>Remove password protection from PDF</p>
+                </div>
+                
+                <div class="tool-card" data-tool="sign-pdf">
+                    <div class="tool-icon">🖊️</div>
+                    <h4>Sign PDF</h4>
+                    <p>Add digital signatures to PDF documents</p>
+                </div>
+                
+                <!-- Watermark Tools -->
+                <div class="tool-card" data-tool="add-watermark">
+                    <div class="tool-icon">💧</div>
+                    <h4>Add Watermark</h4>
+                    <p>Add text or image watermarks to PDF</p>
+                </div>
+                
+                <div class="tool-card" data-tool="remove-watermark">
+                    <div class="tool-icon">🚫</div>
+                    <h4>Remove Watermark</h4>
+                    <p>Remove watermarks from PDF documents</p>
+                </div>
+                
+                <!-- Page Management -->
+                <div class="tool-card" data-tool="add-page-numbers">
+                    <div class="tool-icon">🔢</div>
+                    <h4>Add Page Numbers</h4>
+                    <p>Insert page numbers to PDF documents</p>
+                </div>
+                
+                <div class="tool-card" data-tool="remove-page-numbers">
+                    <div class="tool-icon">🚫</div>
+                    <h4>Remove Page Numbers</h4>
+                    <p>Delete page numbers from PDF</p>
+                </div>
+                
+                <div class="tool-card" data-tool="add-header-footer">
+                    <div class="tool-icon">📋</div>
+                    <h4>Add Header & Footer</h4>
+                    <p>Insert headers and footers to PDF</p>
+                </div>
+                
+                <div class="tool-card" data-tool="remove-header-footer">
+                    <div class="tool-icon">🚫</div>
+                    <h4>Remove Header & Footer</h4>
+                    <p>Delete headers and footers from PDF</p>
+                </div>
+                
+                <!-- Advanced Tools -->
+                <div class="tool-card" data-tool="repair-pdf">
+                    <div class="tool-icon">🔧</div>
+                    <h4>Repair PDF</h4>
+                    <p>Fix corrupted or damaged PDF files</p>
+                </div>
+                
+                <div class="tool-card" data-tool="ocr-pdf">
+                    <div class="tool-icon">🔍</div>
+                    <h4>OCR PDF</h4>
+                    <p>Extract text from scanned PDF documents</p>
+                </div>
+                
+                <div class="tool-card" data-tool="scan-to-pdf">
+                    <div class="tool-icon">📷</div>
+                    <h4>Scan to PDF</h4>
+                    <p>Convert scanned documents to PDF</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Converter Section (Hidden by default) -->
+    <section class="converter-section" id="converterSection">
+        <div class="container">
+            <button class="back-btn" id="backBtn">← Back to All Tools</button>
+            
+            <div class="converter-header">
+                <h3 id="converterTitle">Convert Your PDF</h3>
+                <p id="converterDescription">Upload your file and select options</p>
+            </div>
+            
+            <div class="converter-container">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">📤</div>
+                    <h4 class="upload-text">Drag & Drop your file here</h4>
+                    <p>or</p>
+                    <button class="btn convert-btn" id="browseBtn" style="background-color: var(--primary); color: white;">Browse Files</button>
+                    <input type="file" id="fileInput" class="file-input" accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.jpg,.jpeg,.png,.html">
+                    <div class="file-info" id="fileInfo">No file selected</div>
+                    
+                    <!-- Progress Bar -->
+                    <div class="progress-container" id="progressContainer">
+                        <div class="progress-bar">
+                            <div class="progress" id="progressBar"></div>
+                        </div>
+                        <div class="progress-text" id="progressText">0%</div>
+                    </div>
+                </div>
+                
+                <div class="conversion-options" id="conversionOptions">
+                    <!-- Options will be dynamically populated based on the tool -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vertical Ad Space -->
+    <div class="container">
+        <div class="ad-space vertical">
+            <!-- Google AdSense Ad Unit -->
+            <!-- Replace with your Ad Unit ID -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+                crossorigin="anonymous"></script>
+            <!-- Ad Unit 2 -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                data-ad-slot="XXXXXXXXXX"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>PDF Master Pro</h4>
+                    <p>30+ powerful PDF utilities for all your document needs. No registration required.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Tools</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Popular Tools</h4>
+                    <ul>
+                        <li><a href="#">PDF to Word</a></li>
+                        <li><a href="#">Merge PDF</a></li>
+                        <li><a href="#">Compress PDF</a></li>
+                        <li><a href="#">Edit PDF</a></li>
+                        <li><a href="#">PDF to JPG</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 PDF Master Pro. All rights reserved. | No registration required</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // DOM Elements
+        const toolsGrid = document.getElementById('toolsGrid');
+        const converterSection = document.getElementById('converterSection');
+        const backBtn = document.getElementById('backBtn');
+        const converterTitle = document.getElementById('converterTitle');
+        const converterDescription = document.getElementById('converterDescription');
+        const conversionOptions = document.getElementById('conversionOptions');
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('fileInput');
+        const browseBtn = document.getElementById('browseBtn');
+        const fileInfo = document.getElementById('fileInfo');
+        const convertBtn = document.getElementById('convertBtn');
+        const progressContainer = document.getElementById('progressContainer');
+        const progressBar = document.getElementById('progressBar');
+        const progressText = document.getElementById('progressText');
+        
+        let selectedFile = null;
+        let selectedTool = null;
+        
+        // Tool configurations
+        const toolConfigs = {
+            'pdf-to-word': {
+                title: 'PDF to Word Converter',
+                description: 'Convert PDF to editable Word documents',
+                accept: '.pdf',
+                options: [
+                    { value: 'docx', label: 'Word Document (.docx)', icon: '📝' },
+                    { value: 'doc', label: 'Word 97-2003 (.doc)', icon: '📄' }
+                ]
+            },
+            'word-to-pdf': {
+                title: 'Word to PDF Converter',
+                description: 'Convert Word documents to PDF format',
+                accept: '.doc,.docx',
+                options: [
+                    { value: 'pdf', label: 'PDF Document', icon: '📄' }
+                ]
+            },
+            'merge-pdf': {
+                title: 'Merge PDF',
+                description: 'Combine multiple PDFs into one document',
+                accept: '.pdf',
+                options: [
+                    { value: 'merge-order', label: 'Select merge order', icon: '🔀' }
+                ]
+            },
+            'compress-pdf': {
+                title: 'Compress PDF',
+                description: 'Reduce PDF file size without quality loss',
+                accept: '.pdf',
+                options: [
+                    { value: 'low', label: 'Low Compression (Best Quality)', icon: '💎' },
+                    { value: 'medium', label: 'Medium Compression', icon: '⚖️' },
+                    { value: 'high', label: 'High Compression (Smaller Size)', icon: '🗜️' }
+                ]
+            },
+            // Add configurations for other tools...
+        };
+        
+        // Event Listeners
+        toolsGrid.addEventListener('click', (e) => {
+            const toolCard = e.target.closest('.tool-card');
+            if (toolCard) {
+                const toolId = toolCard.getAttribute('data-tool');
+                openTool(toolId);
+            }
+        });
+        
+        backBtn.addEventListener('click', () => {
+            converterSection.style.display = 'none';
+            toolsGrid.style.display = 'grid';
+        });
+        
+        browseBtn.addEventListener('click', () => {
+            fileInput.click();
+        });
+        
+        fileInput.addEventListener('change', handleFileSelect);
+        
+        // Drag and Drop functionality
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.classList.add('active');
+        });
+        
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.classList.remove('active');
+        });
+        
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.classList.remove('active');
+            
+            if (e.dataTransfer.files.length) {
+                handleFile(e.dataTransfer.files[0]);
+            }
+        });
+        
+        // Functions
+        function openTool(toolId) {
+            selectedTool = toolId;
+            const config = toolConfigs[toolId] || {
+                title: 'PDF Tool',
+                description: 'Process your PDF file',
+                accept: '.pdf',
+                options: [
+                    { value: 'default', label: 'Process File', icon: '⚙️' }
+                ]
+            };
+            
+            converterTitle.textContent = config.title;
+            converterDescription.textContent = config.description;
+            fileInput.setAttribute('accept', config.accept);
+            
+            // Populate options
+            conversionOptions.innerHTML = '';
+            
+            if (config.options.length > 0) {
+                const optionsTitle = document.createElement('h4');
+                optionsTitle.textContent = 'Select Options';
+                conversionOptions.appendChild(optionsTitle);
+                
+                const optionsContainer = document.createElement('div');
+                optionsContainer.className = 'format-options';
+                
+                config.options.forEach(option => {
+                    const optionElement = document.createElement('div');
+                    optionElement.className = 'format-option';
+                    optionElement.setAttribute('data-value', option.value);
+                    optionElement.innerHTML = `
+                        <div class="format-icon">${option.icon}</div>
+                        <div>${option.label}</div>
+                    `;
+                    optionsContainer.appendChild(optionElement);
+                });
+                
+                conversionOptions.appendChild(optionsContainer);
+            }
+            
+            const convertButton = document.createElement('button');
+            convertButton.className = 'convert-btn';
+            convertButton.id = 'convertBtn';
+            convertButton.textContent = 'Process File';
+            convertButton.disabled = true;
+            convertButton.addEventListener('click', processFile);
+            conversionOptions.appendChild(convertButton);
+            
+            // Show converter section
+            toolsGrid.style.display = 'none';
+            converterSection.style.display = 'block';
+            
+            // Reset file selection
+            selectedFile = null;
+            fileInfo.textContent = 'No file selected';
+            progressContainer.style.display = 'none';
+        }
+        
+        function handleFileSelect(e) {
+            if (e.target.files.length) {
+                handleFile(e.target.files[0]);
+            }
+        }
+        
+        function handleFile(file) {
+            // Check if file type is accepted
+            const config = toolConfigs[selectedTool];
+            const acceptedTypes = config.accept.split(',');
+            const fileExtension = '.' + file.name.split('.').pop().toLowerCase();
+            
+            if (!acceptedTypes.includes(fileExtension)) {
+                alert(`Please select a file with one of these extensions: ${acceptedTypes.join(', ')}`);
+                return;
+            }
+            
+            selectedFile = file;
+            fileInfo.textContent = `Selected: ${file.name} (${formatFileSize(file.size)})`;
+            
+            // Enable convert button
+            const convertBtn = document.getElementById('convertBtn');
+            if (convertBtn) {
+                convertBtn.disabled = false;
+            }
+        }
+        
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+        
+        function processFile() {
+            if (!selectedFile) return;
+            
+            // Show progress bar
+            progressContainer.style.display = 'block';
+            
+            const convertBtn = document.getElementById('convertBtn');
+            convertBtn.textContent = 'Processing...';
+            convertBtn.disabled = true;
+            
+            // Simulate processing with progress updates
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += 5;
+                progressBar.style.width = `${progress}%`;
+                progressText.textContent = `${progress}%`;
+                
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    
+                    // Create a download link for the processed file
+                    const downloadLink = document.createElement('a');
+                    downloadLink.href = '#'; // In a real app, this would be the processed file URL
+                    downloadLink.download = `processed_${selectedFile.name}`;
+                    downloadLink.textContent = 'Download Processed File';
+                    downloadLink.className = 'convert-btn';
+                    downloadLink.style.marginTop = '15px';
+                    downloadLink.style.display = 'inline-block';
+                    downloadLink.style.textDecoration = 'none';
+                    
+                    // Show success message
+                    fileInfo.innerHTML = `
+                        <div style="color: var(--success); margin-bottom: 10px; font-weight: bold;">
+                            ✅ Processing successful!
+                        </div>
+                    `;
+                    fileInfo.appendChild(downloadLink);
+                    
+                    // Reset button
+                    convertBtn.textContent = 'Process File';
+                    convertBtn.disabled = false;
+                    
+                    // Reset progress bar
+                    setTimeout(() => {
+                        progressContainer.style.display = 'none';
+                        progressBar.style.width = '0%';
+                        progressText.textContent = '0%';
+                    }, 3000);
+                    
+                    // In a real application, you would trigger the download
+                    // downloadLink.click();
+                }
+            }, 100);
+        }
+    </script>
+</body>
+</html>
