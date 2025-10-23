@@ -7,33 +7,6 @@
     <meta name="description" content="Free online PDF tools: Convert, edit, merge, split, compress, and more. 30+ PDF utilities in one place. No registration required.">
     <meta name="keywords" content="PDF converter, PDF editor, merge PDF, split PDF, compress PDF, PDF to Word, Word to PDF, PDF tools">
     
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="PDF Master Pro - All-in-One PDF Solution">
-    <meta property="og:description" content="30+ PDF tools in one place. Convert, edit, merge, split, compress and more. No registration required.">
-    <meta property="og:type" content="website">
-    
-    <!-- Structured Data for SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "PDF Master Pro",
-      "description": "Comprehensive PDF tool with 30+ utilities for all your PDF needs",
-      "url": "https://pdfmasterpro.example.com",
-      "applicationCategory": "UtilityApplication",
-      "operatingSystem": "All",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "author": {
-        "@type": "Organization",
-        "name": "PDF Master Pro"
-      }
-    }
-    </script>
-    
     <style>
         :root {
             --primary: #4361ee;
@@ -102,26 +75,41 @@
             color: var(--primary);
         }
         
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 25px;
+        /* Search Bar */
+        .search-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
         }
         
-        nav a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
+        .search-bar {
+            width: 100%;
+            padding: 12px 20px;
+            border-radius: 50px;
+            border: 2px solid #e9ecef;
+            font-size: 16px;
             transition: var(--transition);
+            outline: none;
         }
         
-        nav a:hover {
-            color: var(--primary);
+        .search-bar:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+        }
+        
+        .search-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray);
+            font-size: 18px;
         }
         
         /* Hero Section */
         .hero {
-            padding: 80px 0;
+            padding: 60px 0;
             background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
             color: white;
             text-align: center;
@@ -398,7 +386,7 @@
         
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 40px;
             margin-bottom: 40px;
         }
@@ -480,6 +468,38 @@
             color: var(--primary-dark);
         }
         
+        /* No Results Message */
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            color: var(--gray);
+            display: none;
+        }
+        
+        /* Additional UI Elements */
+        .range-input {
+            width: 100%;
+            margin: 10px 0;
+        }
+        
+        .text-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #e9ecef;
+            border-radius: var(--border-radius);
+            margin: 10px 0;
+        }
+        
+        .option-group {
+            margin: 15px 0;
+        }
+        
+        .option-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
         /* Responsive Design */
         @media (max-width: 992px) {
             .converter-container {
@@ -499,12 +519,6 @@
             .header-content {
                 flex-direction: column;
                 gap: 15px;
-            }
-            
-            nav ul {
-                gap: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
             }
             
             .hero h2 {
@@ -545,15 +559,10 @@
                     <h1>PDF Master Pro</h1>
                 </div>
                 
-                <nav>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">How It Works</a></li>
-                        <li><a href="#">Tools</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
+                <div class="search-container">
+                    <input type="text" class="search-bar" id="searchBar" placeholder="Search for a PDF tool...">
+                    <div class="search-icon">🔍</div>
+                </div>
             </div>
         </div>
     </header>
@@ -563,7 +572,7 @@
         <div class="container">
             <h2>All PDF Tools You Need in One Place</h2>
             <p>30+ powerful PDF utilities for conversion, editing, compression and more. No registration required.</p>
-            <a href="#tools" class="btn btn-primary">Explore All Tools</a>
+            <button class="btn btn-primary" id="exploreToolsBtn">Explore All Tools</button>
         </div>
     </section>
 
@@ -571,19 +580,10 @@
     <div class="container">
         <div class="ad-space horizontal">
             <!-- Google AdSense Ad Unit -->
-            <!-- Replace with your Ad Unit ID -->
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
-                crossorigin="anonymous"></script>
-            <!-- Ad Unit 1 -->
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                data-ad-slot="XXXXXXXXXX"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            <div style="background:#f0f0f0; padding:15px; border-radius:5px;">
+                <p>Advertisement Space</p>
+                <small>Google AdSense will be integrated here</small>
+            </div>
         </div>
     </div>
 
@@ -592,206 +592,21 @@
         <div class="container">
             <div class="section-title">
                 <h3>All PDF Tools</h3>
-                <p>Choose from our comprehensive collection of PDF utilities</p>
+                <p>Search and find the perfect tool for your PDF needs</p>
             </div>
             
             <div class="tools-grid" id="toolsGrid">
-                <!-- Conversion Tools -->
-                <div class="tool-card" data-tool="pdf-to-word">
-                    <div class="tool-icon">📝</div>
-                    <h4>PDF to Word</h4>
-                    <p>Convert PDF to editable Word documents</p>
-                </div>
-                
-                <div class="tool-card" data-tool="word-to-pdf">
-                    <div class="tool-icon">📄</div>
-                    <h4>Word to PDF</h4>
-                    <p>Convert Word documents to PDF format</p>
-                </div>
-                
-                <div class="tool-card" data-tool="pdf-to-powerpoint">
-                    <div class="tool-icon">📊</div>
-                    <h4>PDF to PowerPoint</h4>
-                    <p>Convert PDF to editable PowerPoint presentations</p>
-                </div>
-                
-                <div class="tool-card" data-tool="powerpoint-to-pdf">
-                    <div class="tool-icon">📽️</div>
-                    <h4>PowerPoint to PDF</h4>
-                    <p>Convert PowerPoint to PDF format</p>
-                </div>
-                
-                <div class="tool-card" data-tool="pdf-to-excel">
-                    <div class="tool-icon">📈</div>
-                    <h4>PDF to Excel</h4>
-                    <p>Extract tables from PDF to Excel spreadsheets</p>
-                </div>
-                
-                <div class="tool-card" data-tool="excel-to-pdf">
-                    <div class="tool-icon">📑</div>
-                    <h4>Excel to PDF</h4>
-                    <p>Convert Excel spreadsheets to PDF</p>
-                </div>
-                
-                <div class="tool-card" data-tool="pdf-to-jpg">
-                    <div class="tool-icon">🖼️</div>
-                    <h4>PDF to JPG</h4>
-                    <p>Convert PDF pages to JPG images</p>
-                </div>
-                
-                <div class="tool-card" data-tool="jpg-to-pdf">
-                    <div class="tool-icon">📸</div>
-                    <h4>JPG to PDF</h4>
-                    <p>Convert JPG images to PDF documents</p>
-                </div>
-                
-                <div class="tool-card" data-tool="html-to-pdf">
-                    <div class="tool-icon">🌐</div>
-                    <h4>HTML to PDF</h4>
-                    <p>Convert web pages to PDF documents</p>
-                </div>
-                
-                <div class="tool-card" data-tool="pdf-to-html">
-                    <div class="tool-icon">💻</div>
-                    <h4>PDF to HTML</h4>
-                    <p>Convert PDF to HTML web pages</p>
-                </div>
-                
-                <!-- Editing Tools -->
-                <div class="tool-card" data-tool="merge-pdf">
-                    <div class="tool-icon">🔗</div>
-                    <h4>Merge PDF</h4>
-                    <p>Combine multiple PDFs into one document</p>
-                </div>
-                
-                <div class="tool-card" data-tool="split-pdf">
-                    <div class="tool-icon">✂️</div>
-                    <h4>Split PDF</h4>
-                    <p>Split PDF into multiple documents</p>
-                </div>
-                
-                <div class="tool-card" data-tool="compress-pdf">
-                    <div class="tool-icon">🗜️</div>
-                    <h4>Compress PDF</h4>
-                    <p>Reduce PDF file size without quality loss</p>
-                </div>
-                
-                <div class="tool-card" data-tool="edit-pdf">
-                    <div class="tool-icon">✏️</div>
-                    <h4>Edit PDF</h4>
-                    <p>Edit text, images, and pages in PDF</p>
-                </div>
-                
-                <div class="tool-card" data-tool="enhance-pdf">
-                    <div class="tool-icon">✨</div>
-                    <h4>Enhance PDF</h4>
-                    <p>Improve quality and readability of PDF</p>
-                </div>
-                
-                <div class="tool-card" data-tool="rotate-pdf">
-                    <div class="tool-icon">🔄</div>
-                    <h4>Rotate PDF</h4>
-                    <p>Rotate PDF pages to correct orientation</p>
-                </div>
-                
-                <div class="tool-card" data-tool="crop-pdf">
-                    <div class="tool-icon">✂️</div>
-                    <h4>Crop PDF</h4>
-                    <p>Crop PDF pages to remove margins</p>
-                </div>
-                
-                <div class="tool-card" data-tool="add-page">
-                    <div class="tool-icon">➕</div>
-                    <h4>Add Page</h4>
-                    <p>Add blank pages to PDF documents</p>
-                </div>
-                
-                <div class="tool-card" data-tool="remove-page">
-                    <div class="tool-icon">➖</div>
-                    <h4>Remove Page</h4>
-                    <p>Delete pages from PDF documents</p>
-                </div>
-                
-                <!-- Security Tools -->
-                <div class="tool-card" data-tool="lock-pdf">
-                    <div class="tool-icon">🔒</div>
-                    <h4>Lock PDF</h4>
-                    <p>Password protect your PDF documents</p>
-                </div>
-                
-                <div class="tool-card" data-tool="unlock-pdf">
-                    <div class="tool-icon">🔓</div>
-                    <h4>Unlock PDF</h4>
-                    <p>Remove password protection from PDF</p>
-                </div>
-                
-                <div class="tool-card" data-tool="sign-pdf">
-                    <div class="tool-icon">🖊️</div>
-                    <h4>Sign PDF</h4>
-                    <p>Add digital signatures to PDF documents</p>
-                </div>
-                
-                <!-- Watermark Tools -->
-                <div class="tool-card" data-tool="add-watermark">
-                    <div class="tool-icon">💧</div>
-                    <h4>Add Watermark</h4>
-                    <p>Add text or image watermarks to PDF</p>
-                </div>
-                
-                <div class="tool-card" data-tool="remove-watermark">
-                    <div class="tool-icon">🚫</div>
-                    <h4>Remove Watermark</h4>
-                    <p>Remove watermarks from PDF documents</p>
-                </div>
-                
-                <!-- Page Management -->
-                <div class="tool-card" data-tool="add-page-numbers">
-                    <div class="tool-icon">🔢</div>
-                    <h4>Add Page Numbers</h4>
-                    <p>Insert page numbers to PDF documents</p>
-                </div>
-                
-                <div class="tool-card" data-tool="remove-page-numbers">
-                    <div class="tool-icon">🚫</div>
-                    <h4>Remove Page Numbers</h4>
-                    <p>Delete page numbers from PDF</p>
-                </div>
-                
-                <div class="tool-card" data-tool="add-header-footer">
-                    <div class="tool-icon">📋</div>
-                    <h4>Add Header & Footer</h4>
-                    <p>Insert headers and footers to PDF</p>
-                </div>
-                
-                <div class="tool-card" data-tool="remove-header-footer">
-                    <div class="tool-icon">🚫</div>
-                    <h4>Remove Header & Footer</h4>
-                    <p>Delete headers and footers from PDF</p>
-                </div>
-                
-                <!-- Advanced Tools -->
-                <div class="tool-card" data-tool="repair-pdf">
-                    <div class="tool-icon">🔧</div>
-                    <h4>Repair PDF</h4>
-                    <p>Fix corrupted or damaged PDF files</p>
-                </div>
-                
-                <div class="tool-card" data-tool="ocr-pdf">
-                    <div class="tool-icon">🔍</div>
-                    <h4>OCR PDF</h4>
-                    <p>Extract text from scanned PDF documents</p>
-                </div>
-                
-                <div class="tool-card" data-tool="scan-to-pdf">
-                    <div class="tool-icon">📷</div>
-                    <h4>Scan to PDF</h4>
-                    <p>Convert scanned documents to PDF</p>
-                </div>
+                <!-- Tools will be populated by JavaScript -->
+            </div>
+            
+            <div class="no-results" id="noResults">
+                <h3>No tools found</h3>
+                <p>Try searching with different keywords</p>
             </div>
         </div>
     </section>
 
-    <!-- Converter Section (Hidden by default) -->
+    <!-- Converter Section -->
     <section class="converter-section" id="converterSection">
         <div class="container">
             <button class="back-btn" id="backBtn">← Back to All Tools</button>
@@ -806,11 +621,10 @@
                     <div class="upload-icon">📤</div>
                     <h4 class="upload-text">Drag & Drop your file here</h4>
                     <p>or</p>
-                    <button class="btn convert-btn" id="browseBtn" style="background-color: var(--primary); color: white;">Browse Files</button>
-                    <input type="file" id="fileInput" class="file-input" accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.jpg,.jpeg,.png,.html">
+                    <button class="btn convert-btn" id="browseBtn">Browse Files</button>
+                    <input type="file" id="fileInput" class="file-input">
                     <div class="file-info" id="fileInfo">No file selected</div>
                     
-                    <!-- Progress Bar -->
                     <div class="progress-container" id="progressContainer">
                         <div class="progress-bar">
                             <div class="progress" id="progressBar"></div>
@@ -820,7 +634,7 @@
                 </div>
                 
                 <div class="conversion-options" id="conversionOptions">
-                    <!-- Options will be dynamically populated based on the tool -->
+                    <!-- Options will be populated by JavaScript -->
                 </div>
             </div>
         </div>
@@ -830,19 +644,10 @@
     <div class="container">
         <div class="ad-space vertical">
             <!-- Google AdSense Ad Unit -->
-            <!-- Replace with your Ad Unit ID -->
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
-                crossorigin="anonymous"></script>
-            <!-- Ad Unit 2 -->
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                data-ad-slot="XXXXXXXXXX"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            <div style="background:#f0f0f0; padding:15px; border-radius:5px;">
+                <p>Advertisement Space</p>
+                <small>Google AdSense will be integrated here</small>
+            </div>
         </div>
     </div>
 
@@ -853,17 +658,6 @@
                 <div class="footer-column">
                     <h4>PDF Master Pro</h4>
                     <p>30+ powerful PDF utilities for all your document needs. No registration required.</p>
-                </div>
-                
-                <div class="footer-column">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">How It Works</a></li>
-                        <li><a href="#">Tools</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
                 </div>
                 
                 <div class="footer-column">
@@ -894,27 +688,79 @@
     </footer>
 
     <script>
-        // DOM Elements
-        const toolsGrid = document.getElementById('toolsGrid');
-        const converterSection = document.getElementById('converterSection');
-        const backBtn = document.getElementById('backBtn');
-        const converterTitle = document.getElementById('converterTitle');
-        const converterDescription = document.getElementById('converterDescription');
-        const conversionOptions = document.getElementById('conversionOptions');
-        const uploadArea = document.getElementById('uploadArea');
-        const fileInput = document.getElementById('fileInput');
-        const browseBtn = document.getElementById('browseBtn');
-        const fileInfo = document.getElementById('fileInfo');
-        const convertBtn = document.getElementById('convertBtn');
-        const progressContainer = document.getElementById('progressContainer');
-        const progressBar = document.getElementById('progressBar');
-        const progressText = document.getElementById('progressText');
-        
-        let selectedFile = null;
-        let selectedTool = null;
-        
+        // Tool data
+        const tools = [
+            { id: 'merge-pdf', name: 'Merge PDF', description: 'Combine multiple PDFs into one document', icon: '🔗', keywords: 'merge pdf combine join' },
+            { id: 'split-pdf', name: 'Split PDF', description: 'Split PDF into multiple documents', icon: '✂️', keywords: 'split pdf divide separate' },
+            { id: 'compress-pdf', name: 'Compress PDF', description: 'Reduce PDF file size without quality loss', icon: '🗜️', keywords: 'compress pdf reduce size shrink' },
+            { id: 'enhance-pdf', name: 'Enhance PDF', description: 'Improve quality and readability of PDF', icon: '✨', keywords: 'enhance pdf improve quality' },
+            { id: 'pdf-to-word', name: 'PDF to Word', description: 'Convert PDF to editable Word documents', icon: '📝', keywords: 'pdf to word doc docx convert' },
+            { id: 'word-to-pdf', name: 'Word to PDF', description: 'Convert Word documents to PDF format', icon: '📄', keywords: 'word to pdf doc docx convert' },
+            { id: 'pdf-to-powerpoint', name: 'PDF to PowerPoint', description: 'Convert PDF to editable PowerPoint presentations', icon: '📊', keywords: 'pdf to powerpoint ppt pptx convert' },
+            { id: 'powerpoint-to-pdf', name: 'PowerPoint to PDF', description: 'Convert PowerPoint to PDF format', icon: '📽️', keywords: 'powerpoint to pdf ppt pptx convert' },
+            { id: 'pdf-to-excel', name: 'PDF to Excel', description: 'Extract tables from PDF to Excel spreadsheets', icon: '📈', keywords: 'pdf to excel xls xlsx convert' },
+            { id: 'excel-to-pdf', name: 'Excel to PDF', description: 'Convert Excel spreadsheets to PDF', icon: '📑', keywords: 'excel to pdf xls xlsx convert' },
+            { id: 'edit-pdf', name: 'Edit PDF', description: 'Edit text, images, and pages in PDF', icon: '✏️', keywords: 'edit pdf modify change text' },
+            { id: 'pdf-to-jpg', name: 'PDF to JPG', description: 'Convert PDF pages to JPG images', icon: '🖼️', keywords: 'pdf to jpg jpeg image convert' },
+            { id: 'jpg-to-pdf', name: 'JPG to PDF', description: 'Convert JPG images to PDF documents', icon: '📸', keywords: 'jpg to pdf jpeg image convert' },
+            { id: 'sign-pdf', name: 'Sign PDF', description: 'Add digital signatures to PDF documents', icon: '🖊️', keywords: 'sign pdf signature digital' },
+            { id: 'remove-watermark', name: 'Remove Watermark', description: 'Remove watermarks from PDF documents', icon: '🚫', keywords: 'remove watermark delete' },
+            { id: 'add-watermark', name: 'Add Watermark', description: 'Add text or image watermarks to PDF', icon: '💧', keywords: 'add watermark text image' },
+            { id: 'rotate-pdf', name: 'Rotate PDF', description: 'Rotate PDF pages to correct orientation', icon: '🔄', keywords: 'rotate pdf turn orientation' },
+            { id: 'html-to-pdf', name: 'HTML to PDF', description: 'Convert web pages to PDF documents', icon: '🌐', keywords: 'html to pdf web page convert' },
+            { id: 'pdf-to-html', name: 'PDF to HTML', description: 'Convert PDF to HTML web pages', icon: '💻', keywords: 'pdf to html web page convert' },
+            { id: 'lock-pdf', name: 'Lock PDF', description: 'Password protect your PDF documents', icon: '🔒', keywords: 'lock pdf password protect secure' },
+            { id: 'unlock-pdf', name: 'Unlock PDF', description: 'Remove password protection from PDF', icon: '🔓', keywords: 'unlock pdf remove password' },
+            { id: 'repair-pdf', name: 'Repair PDF', description: 'Fix corrupted or damaged PDF files', icon: '🔧', keywords: 'repair pdf fix corrupt' },
+            { id: 'add-page-numbers', name: 'Add Page Numbers', description: 'Insert page numbers to PDF documents', icon: '🔢', keywords: 'add page numbers numbering' },
+            { id: 'remove-page-numbers', name: 'Remove Page Numbers', description: 'Delete page numbers from PDF', icon: '🚫', keywords: 'remove page numbers delete' },
+            { id: 'add-header-footer', name: 'Add Header & Footer', description: 'Insert headers and footers to PDF', icon: '📋', keywords: 'add header footer' },
+            { id: 'remove-header-footer', name: 'Remove Header & Footer', description: 'Delete headers and footers from PDF', icon: '🚫', keywords: 'remove header footer delete' },
+            { id: 'scan-to-pdf', name: 'Scan to PDF', description: 'Convert scanned documents to PDF', icon: '📷', keywords: 'scan to pdf document' },
+            { id: 'ocr-pdf', name: 'OCR PDF', description: 'Extract text from scanned PDF documents', icon: '🔍', keywords: 'ocr pdf text extract' },
+            { id: 'crop-pdf', name: 'Crop PDF', description: 'Crop PDF pages to remove margins', icon: '✂️', keywords: 'crop pdf trim margins' },
+            { id: 'add-page', name: 'Add Page', description: 'Add blank pages to PDF documents', icon: '➕', keywords: 'add page insert' },
+            { id: 'remove-page', name: 'Remove Page', description: 'Delete pages from PDF documents', icon: '➖', keywords: 'remove page delete' }
+        ];
+
         // Tool configurations
         const toolConfigs = {
+            'merge-pdf': {
+                title: 'Merge PDF',
+                description: 'Combine multiple PDFs into one document',
+                accept: '.pdf',
+                multiple: true,
+                options: [
+                    { value: 'order', label: 'Select merge order', icon: '🔀', type: 'order' }
+                ]
+            },
+            'split-pdf': {
+                title: 'Split PDF',
+                description: 'Split PDF into multiple documents',
+                accept: '.pdf',
+                options: [
+                    { value: 'page-ranges', label: 'Select page ranges', icon: '📄', type: 'range' }
+                ]
+            },
+            'compress-pdf': {
+                title: 'Compress PDF',
+                description: 'Reduce PDF file size without quality loss',
+                accept: '.pdf',
+                options: [
+                    { value: 'low', label: 'Low Compression (Best Quality)', icon: '💎' },
+                    { value: 'medium', label: 'Medium Compression', icon: '⚖️' },
+                    { value: 'high', label: 'High Compression (Smaller Size)', icon: '🗜️' }
+                ]
+            },
+            'enhance-pdf': {
+                title: 'Enhance PDF',
+                description: 'Improve quality and readability of PDF',
+                accept: '.pdf',
+                options: [
+                    { value: 'auto', label: 'Auto Enhance', icon: '✨' },
+                    { value: 'manual', label: 'Manual Settings', icon: '⚙️' }
+                ]
+            },
             'pdf-to-word': {
                 title: 'PDF to Word Converter',
                 description: 'Convert PDF to editable Word documents',
@@ -932,83 +778,349 @@
                     { value: 'pdf', label: 'PDF Document', icon: '📄' }
                 ]
             },
-            'merge-pdf': {
-                title: 'Merge PDF',
-                description: 'Combine multiple PDFs into one document',
+            'pdf-to-powerpoint': {
+                title: 'PDF to PowerPoint Converter',
+                description: 'Convert PDF to editable PowerPoint presentations',
                 accept: '.pdf',
                 options: [
-                    { value: 'merge-order', label: 'Select merge order', icon: '🔀' }
+                    { value: 'pptx', label: 'PowerPoint (.pptx)', icon: '📊' },
+                    { value: 'ppt', label: 'PowerPoint 97-2003 (.ppt)', icon: '📽️' }
                 ]
             },
-            'compress-pdf': {
-                title: 'Compress PDF',
-                description: 'Reduce PDF file size without quality loss',
+            'powerpoint-to-pdf': {
+                title: 'PowerPoint to PDF Converter',
+                description: 'Convert PowerPoint to PDF format',
+                accept: '.ppt,.pptx',
+                options: [
+                    { value: 'pdf', label: 'PDF Document', icon: '📄' }
+                ]
+            },
+            'pdf-to-excel': {
+                title: 'PDF to Excel Converter',
+                description: 'Extract tables from PDF to Excel spreadsheets',
                 accept: '.pdf',
                 options: [
-                    { value: 'low', label: 'Low Compression (Best Quality)', icon: '💎' },
-                    { value: 'medium', label: 'Medium Compression', icon: '⚖️' },
-                    { value: 'high', label: 'High Compression (Smaller Size)', icon: '🗜️' }
+                    { value: 'xlsx', label: 'Excel (.xlsx)', icon: '📈' },
+                    { value: 'xls', label: 'Excel 97-2003 (.xls)', icon: '📑' }
                 ]
             },
-            // Add configurations for other tools...
+            'excel-to-pdf': {
+                title: 'Excel to PDF Converter',
+                description: 'Convert Excel spreadsheets to PDF',
+                accept: '.xls,.xlsx',
+                options: [
+                    { value: 'pdf', label: 'PDF Document', icon: '📄' }
+                ]
+            },
+            'edit-pdf': {
+                title: 'Edit PDF',
+                description: 'Edit text, images, and pages in PDF',
+                accept: '.pdf',
+                options: [
+                    { value: 'text', label: 'Edit Text', icon: '✏️' },
+                    { value: 'images', label: 'Edit Images', icon: '🖼️' },
+                    { value: 'pages', label: 'Edit Pages', icon: '📄' }
+                ]
+            },
+            'pdf-to-jpg': {
+                title: 'PDF to JPG Converter',
+                description: 'Convert PDF pages to JPG images',
+                accept: '.pdf',
+                options: [
+                    { value: 'jpg', label: 'JPG Images', icon: '🖼️' },
+                    { value: 'png', label: 'PNG Images', icon: '🖼️' }
+                ]
+            },
+            'jpg-to-pdf': {
+                title: 'JPG to PDF Converter',
+                description: 'Convert JPG images to PDF documents',
+                accept: '.jpg,.jpeg,.png',
+                multiple: true,
+                options: [
+                    { value: 'pdf', label: 'PDF Document', icon: '📄' }
+                ]
+            },
+            'sign-pdf': {
+                title: 'Sign PDF',
+                description: 'Add digital signatures to PDF documents',
+                accept: '.pdf',
+                options: [
+                    { value: 'draw', label: 'Draw Signature', icon: '🖊️' },
+                    { value: 'upload', label: 'Upload Signature', icon: '📤' }
+                ]
+            },
+            'remove-watermark': {
+                title: 'Remove Watermark',
+                description: 'Remove watermarks from PDF documents',
+                accept: '.pdf',
+                options: [
+                    { value: 'auto', label: 'Auto Remove', icon: '🚫' },
+                    { value: 'manual', label: 'Manual Selection', icon: '🎯' }
+                ]
+            },
+            'add-watermark': {
+                title: 'Add Watermark',
+                description: 'Add text or image watermarks to PDF',
+                accept: '.pdf',
+                options: [
+                    { value: 'text', label: 'Text Watermark', icon: '📝' },
+                    { value: 'image', label: 'Image Watermark', icon: '🖼️' }
+                ]
+            },
+            'rotate-pdf': {
+                title: 'Rotate PDF',
+                description: 'Rotate PDF pages to correct orientation',
+                accept: '.pdf',
+                options: [
+                    { value: '90', label: 'Rotate 90°', icon: '🔄' },
+                    { value: '180', label: 'Rotate 180°', icon: '🔄' },
+                    { value: '270', label: 'Rotate 270°', icon: '🔄' }
+                ]
+            },
+            'html-to-pdf': {
+                title: 'HTML to PDF Converter',
+                description: 'Convert web pages to PDF documents',
+                accept: '.html,.htm',
+                options: [
+                    { value: 'pdf', label: 'PDF Document', icon: '📄' }
+                ]
+            },
+            'pdf-to-html': {
+                title: 'PDF to HTML Converter',
+                description: 'Convert PDF to HTML web pages',
+                accept: '.pdf',
+                options: [
+                    { value: 'html', label: 'HTML Document', icon: '💻' }
+                ]
+            },
+            'lock-pdf': {
+                title: 'Lock PDF',
+                description: 'Password protect your PDF documents',
+                accept: '.pdf',
+                options: [
+                    { value: 'password', label: 'Set Password', icon: '🔒', type: 'password' }
+                ]
+            },
+            'unlock-pdf': {
+                title: 'Unlock PDF',
+                description: 'Remove password protection from PDF',
+                accept: '.pdf',
+                options: [
+                    { value: 'password', label: 'Enter Password', icon: '🔓', type: 'password' }
+                ]
+            },
+            'repair-pdf': {
+                title: 'Repair PDF',
+                description: 'Fix corrupted or damaged PDF files',
+                accept: '.pdf',
+                options: [
+                    { value: 'auto', label: 'Auto Repair', icon: '🔧' }
+                ]
+            },
+            'add-page-numbers': {
+                title: 'Add Page Numbers',
+                description: 'Insert page numbers to PDF documents',
+                accept: '.pdf',
+                options: [
+                    { value: 'position', label: 'Select Position', icon: '🔢', type: 'position' }
+                ]
+            },
+            'remove-page-numbers': {
+                title: 'Remove Page Numbers',
+                description: 'Delete page numbers from PDF',
+                accept: '.pdf',
+                options: [
+                    { value: 'auto', label: 'Auto Remove', icon: '🚫' }
+                ]
+            },
+            'add-header-footer': {
+                title: 'Add Header & Footer',
+                description: 'Insert headers and footers to PDF',
+                accept: '.pdf',
+                options: [
+                    { value: 'header', label: 'Add Header', icon: '📋' },
+                    { value: 'footer', label: 'Add Footer', icon: '📋' }
+                ]
+            },
+            'remove-header-footer': {
+                title: 'Remove Header & Footer',
+                description: 'Delete headers and footers from PDF',
+                accept: '.pdf',
+                options: [
+                    { value: 'auto', label: 'Auto Remove', icon: '🚫' }
+                ]
+            },
+            'scan-to-pdf': {
+                title: 'Scan to PDF',
+                description: 'Convert scanned documents to PDF',
+                accept: '.jpg,.jpeg,.png,.tiff',
+                multiple: true,
+                options: [
+                    { value: 'pdf', label: 'PDF Document', icon: '📄' }
+                ]
+            },
+            'ocr-pdf': {
+                title: 'OCR PDF',
+                description: 'Extract text from scanned PDF documents',
+                accept: '.pdf',
+                options: [
+                    { value: 'english', label: 'English Text', icon: '🔍' },
+                    { value: 'multilingual', label: 'Multiple Languages', icon: '🌐' }
+                ]
+            },
+            'crop-pdf': {
+                title: 'Crop PDF',
+                description: 'Crop PDF pages to remove margins',
+                accept: '.pdf',
+                options: [
+                    { value: 'auto', label: 'Auto Crop', icon: '✂️' },
+                    { value: 'manual', label: 'Manual Crop', icon: '🎯' }
+                ]
+            },
+            'add-page': {
+                title: 'Add Page',
+                description: 'Add blank pages to PDF documents',
+                accept: '.pdf',
+                options: [
+                    { value: 'position', label: 'Select Position', icon: '➕', type: 'position' }
+                ]
+            },
+            'remove-page': {
+                title: 'Remove Page',
+                description: 'Delete pages from PDF documents',
+                accept: '.pdf',
+                options: [
+                    { value: 'range', label: 'Select Pages', icon: '➖', type: 'range' }
+                ]
+            }
         };
-        
-        // Event Listeners
-        toolsGrid.addEventListener('click', (e) => {
-            const toolCard = e.target.closest('.tool-card');
-            if (toolCard) {
-                const toolId = toolCard.getAttribute('data-tool');
-                openTool(toolId);
-            }
-        });
-        
-        backBtn.addEventListener('click', () => {
-            converterSection.style.display = 'none';
-            toolsGrid.style.display = 'grid';
-        });
-        
-        browseBtn.addEventListener('click', () => {
-            fileInput.click();
-        });
-        
-        fileInput.addEventListener('change', handleFileSelect);
-        
-        // Drag and Drop functionality
-        uploadArea.addEventListener('dragover', (e) => {
-            e.preventDefault();
-            uploadArea.classList.add('active');
-        });
-        
-        uploadArea.addEventListener('dragleave', () => {
-            uploadArea.classList.remove('active');
-        });
-        
-        uploadArea.addEventListener('drop', (e) => {
-            e.preventDefault();
-            uploadArea.classList.remove('active');
+
+        // Initialize the application
+        function initApp() {
+            renderTools();
+            setupEventListeners();
+        }
+
+        // Render all tools
+        function renderTools() {
+            const toolsGrid = document.getElementById('toolsGrid');
+            toolsGrid.innerHTML = '';
             
-            if (e.dataTransfer.files.length) {
-                handleFile(e.dataTransfer.files[0]);
-            }
-        });
-        
-        // Functions
+            tools.forEach(tool => {
+                const toolCard = document.createElement('div');
+                toolCard.className = 'tool-card';
+                toolCard.setAttribute('data-tool', tool.id);
+                toolCard.setAttribute('data-name', tool.keywords);
+                
+                toolCard.innerHTML = `
+                    <div class="tool-icon">${tool.icon}</div>
+                    <h4>${tool.name}</h4>
+                    <p>${tool.description}</p>
+                `;
+                
+                toolsGrid.appendChild(toolCard);
+            });
+        }
+
+        // Setup all event listeners
+        function setupEventListeners() {
+            // Search functionality
+            const searchBar = document.getElementById('searchBar');
+            searchBar.addEventListener('input', handleSearch);
+            
+            // Explore tools button
+            const exploreBtn = document.getElementById('exploreToolsBtn');
+            exploreBtn.addEventListener('click', () => {
+                document.getElementById('tools').scrollIntoView({ behavior: 'smooth' });
+            });
+            
+            // Back button
+            const backBtn = document.getElementById('backBtn');
+            backBtn.addEventListener('click', showToolsGrid);
+            
+            // File upload
+            const browseBtn = document.getElementById('browseBtn');
+            const fileInput = document.getElementById('fileInput');
+            const uploadArea = document.getElementById('uploadArea');
+            
+            browseBtn.addEventListener('click', () => fileInput.click());
+            fileInput.addEventListener('change', handleFileSelect);
+            
+            // Drag and drop
+            uploadArea.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                uploadArea.classList.add('active');
+            });
+            
+            uploadArea.addEventListener('dragleave', () => {
+                uploadArea.classList.remove('active');
+            });
+            
+            uploadArea.addEventListener('drop', (e) => {
+                e.preventDefault();
+                uploadArea.classList.remove('active');
+                if (e.dataTransfer.files.length) {
+                    handleFile(e.dataTransfer.files[0]);
+                }
+            });
+            
+            // Tool card clicks (event delegation)
+            document.getElementById('toolsGrid').addEventListener('click', (e) => {
+                const toolCard = e.target.closest('.tool-card');
+                if (toolCard) {
+                    const toolId = toolCard.getAttribute('data-tool');
+                    openTool(toolId);
+                }
+            });
+        }
+
+        // Search functionality
+        function handleSearch(e) {
+            const searchTerm = e.target.value.toLowerCase().trim();
+            const toolCards = document.querySelectorAll('.tool-card');
+            const noResults = document.getElementById('noResults');
+            let visibleCount = 0;
+            
+            toolCards.forEach(card => {
+                const toolName = card.getAttribute('data-name');
+                const toolTitle = card.querySelector('h4').textContent.toLowerCase();
+                
+                if (toolName.includes(searchTerm) || toolTitle.includes(searchTerm) || searchTerm === '') {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            noResults.style.display = visibleCount === 0 && searchTerm !== '' ? 'block' : 'none';
+        }
+
+        // Open tool converter
         function openTool(toolId) {
-            selectedTool = toolId;
             const config = toolConfigs[toolId] || {
-                title: 'PDF Tool',
-                description: 'Process your PDF file',
+                title: tools.find(t => t.id === toolId)?.name || 'PDF Tool',
+                description: tools.find(t => t.id === toolId)?.description || 'Process your PDF file',
                 accept: '.pdf',
                 options: [
                     { value: 'default', label: 'Process File', icon: '⚙️' }
                 ]
             };
             
-            converterTitle.textContent = config.title;
-            converterDescription.textContent = config.description;
-            fileInput.setAttribute('accept', config.accept);
+            // Update converter UI
+            document.getElementById('converterTitle').textContent = config.title;
+            document.getElementById('converterDescription').textContent = config.description;
+            document.getElementById('fileInput').setAttribute('accept', config.accept);
+            
+            // Set multiple file selection if needed
+            if (config.multiple) {
+                document.getElementById('fileInput').setAttribute('multiple', 'multiple');
+            } else {
+                document.getElementById('fileInput').removeAttribute('multiple');
+            }
             
             // Populate options
+            const conversionOptions = document.getElementById('conversionOptions');
             conversionOptions.innerHTML = '';
             
             if (config.options.length > 0) {
@@ -1027,78 +1139,172 @@
                         <div class="format-icon">${option.icon}</div>
                         <div>${option.label}</div>
                     `;
+                    
+                    optionElement.addEventListener('click', function() {
+                        document.querySelectorAll('.format-option').forEach(opt => {
+                            opt.classList.remove('selected');
+                        });
+                        this.classList.add('selected');
+                        
+                        // Add additional UI elements based on option type
+                        addOptionSpecificUI(option.type, option.value);
+                    });
+                    
                     optionsContainer.appendChild(optionElement);
                 });
                 
                 conversionOptions.appendChild(optionsContainer);
+                
+                // Add additional UI elements for specific tools
+                if (toolId === 'split-pdf') {
+                    addRangeInput('Page range (e.g., 1-5, 8, 11-13)');
+                } else if (toolId === 'lock-pdf' || toolId === 'unlock-pdf') {
+                    addPasswordInput('Enter password');
+                }
             }
             
+            // Add convert button
             const convertButton = document.createElement('button');
             convertButton.className = 'convert-btn';
-            convertButton.id = 'convertBtn';
             convertButton.textContent = 'Process File';
             convertButton.disabled = true;
             convertButton.addEventListener('click', processFile);
             conversionOptions.appendChild(convertButton);
             
-            // Show converter section
-            toolsGrid.style.display = 'none';
-            converterSection.style.display = 'block';
+            // Show converter
+            showConverter();
             
             // Reset file selection
-            selectedFile = null;
-            fileInfo.textContent = 'No file selected';
-            progressContainer.style.display = 'none';
+            document.getElementById('fileInfo').textContent = 'No file selected';
+            document.getElementById('progressContainer').style.display = 'none';
         }
-        
+
+        // Add range input for tools like split PDF
+        function addRangeInput(placeholder) {
+            const optionsContainer = document.getElementById('conversionOptions');
+            const rangeInput = document.createElement('input');
+            rangeInput.type = 'text';
+            rangeInput.className = 'text-input';
+            rangeInput.placeholder = placeholder;
+            optionsContainer.appendChild(rangeInput);
+        }
+
+        // Add password input for lock/unlock PDF
+        function addPasswordInput(placeholder) {
+            const optionsContainer = document.getElementById('conversionOptions');
+            const passwordInput = document.createElement('input');
+            passwordInput.type = 'password';
+            passwordInput.className = 'text-input';
+            passwordInput.placeholder = placeholder;
+            optionsContainer.appendChild(passwordInput);
+        }
+
+        // Add option-specific UI elements
+        function addOptionSpecificUI(type, value) {
+            const optionsContainer = document.getElementById('conversionOptions');
+            
+            // Remove any existing additional UI
+            const existingAdditionalUI = optionsContainer.querySelectorAll('.additional-ui');
+            existingAdditionalUI.forEach(el => el.remove());
+            
+            if (type === 'range') {
+                const rangeGroup = document.createElement('div');
+                rangeGroup.className = 'option-group additional-ui';
+                rangeGroup.innerHTML = `
+                    <label for="pageRange">Page Range</label>
+                    <input type="text" id="pageRange" class="text-input" placeholder="e.g., 1-5, 8, 11-13">
+                `;
+                optionsContainer.appendChild(rangeGroup);
+            } else if (type === 'password') {
+                const passwordGroup = document.createElement('div');
+                passwordGroup.className = 'option-group additional-ui';
+                passwordGroup.innerHTML = `
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="text-input" placeholder="Enter password">
+                `;
+                optionsContainer.appendChild(passwordGroup);
+            } else if (type === 'position') {
+                const positionGroup = document.createElement('div');
+                positionGroup.className = 'option-group additional-ui';
+                positionGroup.innerHTML = `
+                    <label for="position">Position</label>
+                    <select id="position" class="text-input">
+                        <option value="top-left">Top Left</option>
+                        <option value="top-center">Top Center</option>
+                        <option value="top-right">Top Right</option>
+                        <option value="bottom-left">Bottom Left</option>
+                        <option value="bottom-center">Bottom Center</option>
+                        <option value="bottom-right">Bottom Right</option>
+                    </select>
+                `;
+                optionsContainer.appendChild(positionGroup);
+            } else if (type === 'order') {
+                const orderGroup = document.createElement('div');
+                orderGroup.className = 'option-group additional-ui';
+                orderGroup.innerHTML = `
+                    <label>Drag and drop files to reorder</label>
+                    <div id="fileOrderList" style="margin-top: 10px; border: 1px solid #e9ecef; border-radius: var(--border-radius); padding: 10px; min-height: 100px;"></div>
+                `;
+                optionsContainer.appendChild(orderGroup);
+            }
+        }
+
+        // Show converter section
+        function showConverter() {
+            document.getElementById('tools').style.display = 'none';
+            document.getElementById('converterSection').style.display = 'block';
+        }
+
+        // Show tools grid
+        function showToolsGrid() {
+            document.getElementById('converterSection').style.display = 'none';
+            document.getElementById('tools').style.display = 'block';
+        }
+
+        // Handle file selection
         function handleFileSelect(e) {
             if (e.target.files.length) {
-                handleFile(e.target.files[0]);
+                handleFile(e.target.files);
             }
         }
-        
-        function handleFile(file) {
-            // Check if file type is accepted
-            const config = toolConfigs[selectedTool];
-            const acceptedTypes = config.accept.split(',');
-            const fileExtension = '.' + file.name.split('.').pop().toLowerCase();
+
+        // Handle file processing
+        function handleFile(files) {
+            const fileInfo = document.getElementById('fileInfo');
+            const convertBtn = document.querySelector('.convert-btn');
             
-            if (!acceptedTypes.includes(fileExtension)) {
-                alert(`Please select a file with one of these extensions: ${acceptedTypes.join(', ')}`);
-                return;
+            if (files.length === 1) {
+                fileInfo.textContent = `Selected: ${files[0].name} (${formatFileSize(files[0].size)})`;
+            } else {
+                fileInfo.textContent = `Selected: ${files.length} files`;
             }
             
-            selectedFile = file;
-            fileInfo.textContent = `Selected: ${file.name} (${formatFileSize(file.size)})`;
-            
-            // Enable convert button
-            const convertBtn = document.getElementById('convertBtn');
             if (convertBtn) {
                 convertBtn.disabled = false;
             }
         }
-        
+
+        // Format file size
         function formatFileSize(bytes) {
             if (bytes === 0) return '0 Bytes';
-            
             const k = 1024;
             const sizes = ['Bytes', 'KB', 'MB', 'GB'];
             const i = Math.floor(Math.log(bytes) / Math.log(k));
-            
             return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
         }
-        
+
+        // Process file
         function processFile() {
-            if (!selectedFile) return;
+            const progressContainer = document.getElementById('progressContainer');
+            const progressBar = document.getElementById('progressBar');
+            const progressText = document.getElementById('progressText');
+            const convertBtn = document.querySelector('.convert-btn');
+            const fileInfo = document.getElementById('fileInfo');
             
-            // Show progress bar
             progressContainer.style.display = 'block';
-            
-            const convertBtn = document.getElementById('convertBtn');
             convertBtn.textContent = 'Processing...';
             convertBtn.disabled = true;
             
-            // Simulate processing with progress updates
             let progress = 0;
             const interval = setInterval(() => {
                 progress += 5;
@@ -1108,17 +1314,17 @@
                 if (progress >= 100) {
                     clearInterval(interval);
                     
-                    // Create a download link for the processed file
                     const downloadLink = document.createElement('a');
-                    downloadLink.href = '#'; // In a real app, this would be the processed file URL
-                    downloadLink.download = `processed_${selectedFile.name}`;
+                    downloadLink.href = '#';
                     downloadLink.textContent = 'Download Processed File';
                     downloadLink.className = 'convert-btn';
                     downloadLink.style.marginTop = '15px';
                     downloadLink.style.display = 'inline-block';
-                    downloadLink.style.textDecoration = 'none';
+                    downloadLink.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        alert('In a real application, this would download the processed file.');
+                    });
                     
-                    // Show success message
                     fileInfo.innerHTML = `
                         <div style="color: var(--success); margin-bottom: 10px; font-weight: bold;">
                             ✅ Processing successful!
@@ -1126,22 +1332,20 @@
                     `;
                     fileInfo.appendChild(downloadLink);
                     
-                    // Reset button
                     convertBtn.textContent = 'Process File';
                     convertBtn.disabled = false;
                     
-                    // Reset progress bar
                     setTimeout(() => {
                         progressContainer.style.display = 'none';
                         progressBar.style.width = '0%';
                         progressText.textContent = '0%';
                     }, 3000);
-                    
-                    // In a real application, you would trigger the download
-                    // downloadLink.click();
                 }
             }, 100);
         }
+
+        // Initialize the app when DOM is loaded
+        document.addEventListener('DOMContentLoaded', initApp);
     </script>
 </body>
 </html>
